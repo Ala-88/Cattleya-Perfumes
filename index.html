@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://kit.fontawesome.com/5479da0db5.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <link rel="stylesheet" href="Project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="Best free online perfume ...">
+    <meta name="keywords" content="Perfume, cattleya, cattleya perfumes">
+    <link rel="icon" href="image/icon.ico">
+    <title>Cattleya Perfumes</title>
+</head>
+<body>
+
+  
+
+
+<div class="lack">
+    <button class="button" onclick="openCity('Home')">Home</button>
+    <button class="button" onclick="openCity('Per')">Perfumes</button>
+    <button class="button" onclick="openCity('About')">About Cattleya</button>
+    <button class="button" onclick="openCity('Cont')">contact Us</button>
+</div>
+  
+<div id="Home" class="w3-container city">
+    <h1>Cattleya Perfumes</h1>
+    <marquee></marquee>
+    <div class="box">
+        <input type="search" placeholder="Search..." class="search">
+        <a href="#" class="btn"><i class ="fa fa-search"></i></a>
+    </div>
+    <div class="cyc">
+        <figure>
+            <img class=perfume src="image/logo.jpg">
+            <img class=perfume src="image/Perfume.jpg">
+            <img class=perfume src="image/Summar.jpg">
+            <img class=perfume src="image/Touch.jpg">
+            <img class=perfume src="image/Without.jpg">
+        </figure>
+        <button class="btn-prev"><i class="fa fa-arrow-circle-left"></i></button>
+        <button class="btn-next"><i class="fa fa-arrow-circle-right"></i></button>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            x =0;
+           $(`.btn-next`).click(function(){
+            x = (x<=300)?(x+100):0;
+           $(`figure`).css(`left`,-x+"%");
+           }) 
+        
+           $(`.btn-prev`).click(function(){
+            x = (x>=100)?(x-100):400;
+           $(`figure`).css(`left`,-x+"%");
+           }) 
+        })
+    </script>
+</div>
+          
+
+         
+         <div id="Per" class="w3-container city" style="display:none">
+             
+                <h1 class="with">Without Restrictions</h1>
+                <img class=perfume1 src="image/wr.jpg">
+                <img class=perfume2 src="image/ww.jpg">
+           
+               <h1 class="sum">Summar Of Kirona</h1>
+               <img class=perfume3 src="image/sk.jpg">
+               <img class=perfume4 src="image/ss.jpg">
+           
+               <h1 class="touch">Touch The Sky</h1>
+               <img class=perfume5 src="image/wr.jpg">
+               <img class=perfume6 src="image/tt.jpg">
+           
+         </div>
+         
+
+
+         <div id="About" class="w3-container city" style="display:none">
+           <img class=pic src="image/a.jpg">
+         </div>
+
+         <div id="Cont" class="w3-container city" style="display:none">
+            
+            <ul class="p">
+               <li>General Manager</li><hr>
+               <p>Mohammed Dakhlalla</p>
+               <p>0046770000000</p><br>
+               <br>
+               <li>Sales Operations Manager</li><hr>
+               <p>Amir Algomaa</p>
+               <p>0046773300000</p>
+            </ul>
+
+           <video class="video" controls poster="img2.jpg"> <source src="image/logo.mp4" type="video/mp4"> </video>
+           <img class=logo1 src="image/Facebook.png">
+           <img class=logo2 src="image/Instagram.png">
+           <img class=logo3 src="image/you tube.png">
+           <a class= "link1" href="https://www.facebook.com/cattleyaperfumes/">Cattleya Perfumes.Facebook</a>
+           <a class= "link2" href="https://www.instagram.com/cattleyaperfumes1/">Cattleya Perfumes.Instagram</a>
+           <a class= "link3" href="https://www.youtube.com/channel/UC7MGxha4Cq5MCFKF_ojE08A">Cattleya Perfumes.YouTube</a>
+         </div>
+         
+         <script>
+         function openCity(cityName) {
+           var i;
+           var x = document.getElementsByClassName("city");
+           for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+           }
+           document.getElementById(cityName).style.display = "block";  
+         }
+         </script>
+
+    
+<script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+      
+
+</body>
+</html>
